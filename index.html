@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="images/fav.png"/>
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
+
+    <title>COVID-19 DASHBOARD</title>
+</head>
+
+
+<body>
+
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light nav_style p-2 ">
+        <a class="navbar-brand pl-4" href="#"><img class="virus2" src="images/fav.png" width="40" height="40" alt="virus"> &nbsp; <span><b>COVID-19</b></span> </a>
+        <button class="navbar-toggler" id="button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto pr-4">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#CovidTracker"><b><img class="virus3" src="images/red_dot.png" width="14.875" height="10.475" alt="virus">LIVE</b>-TRACKER</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#BLOG">BLOG</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        ABOUT COVID-19
+                    </a>
+
+                    <div class="dropdown-menu" id="down" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#coronavirus">WHAT IS COVID-19 ?</a>
+                        <a class="dropdown-item" href="#symptoms">SYMPTOMS</a>
+                        <a class="dropdown-item" href="#prevention">PREVENTION</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html" target="_blank">ABOUT US</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <container class="HEADER ">
+        <div class="main_header">
+            <div class="row w-100 h-100">
+                <div class="col-lg-5 col-mid-5 col-12 order-lg-1 order-2">
+                    <div class="left_side w-100 h-100 d-flex justify-content-center align-items-center ">
+                        <img class="virus" src="images/virus.png" width="360" height="202.5" alt="virus">
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-7 col-12 order-lg-2 order-1">
+                    <div class="right_side w-100 h-100 d-flex justify-content-center align-items-center">
+                        <h1>
+                            <h1 style="font-family: 'Dancing Script', cursive;"><span style="font-size: 5rem;">“</span>Safety is the engine, You are the key that starts it<span style="font-size: 5rem">”</span> </h1>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </container>
+
+
+
+    <br><br><br><br>
+    <container class ="SECOND" id="CovidTracker">
+        <main class="content-area container" >
+
+            <header>
+                <h1 id="ankur" style="text-align: center"> <b><img class="virus3" src="images/red_dot.png" width="29.75" height="20.95" alt="virus">LIVE</b>-TRACKER</h1>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class= "mt-5 ">
+                                <h1> <strong>COVID-19 Cases In</strong><span id="country-flag"></span></h1>
+                                <h4 id="date-today"></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <br><br>
+            <section class="row d-flex justify-content-center">
+                <div class="input-group mb-3 mt-3 col-md-5">
+                    <input id="country-name" type="text" class="form-control"
+                        placeholder="Country name. example: India" value="India">
+
+                    <div class="input-group-append ">
+                        <button class="btn btn-warning" type="button" id="search-btn">Search</button>
+                    </div>
+                </div>
+            </section>
+            <br><br><br>
+            <div class="row row-cols-1 row-cols-md-3">
+
+                <div class="col mb-4">
+                    <div class="card h-100">
+                        <i class="fa fa-tachometer fa-3x"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Active Cases</h5>
+                            <h3 id="active-case" class="card-text"></h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col mb-4">
+                    <div class="card h-100">
+                        <i class="fa fa-check-circle-o fa-3x"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Total Recovered</h5>
+                            <h3 id="total-recovered" class="card-text"></h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col mb-4">
+                    <div class="card h-100">
+                        <i class="fa fa-times-circle fa-3x"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Total Deaths</h5>
+                            <h3 id="total-death" class="card-text"></h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col mb-4">
+                    <div class="card h-100">
+                        <i class="fa fa-th-list fa-3x"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">New Cases Today</h5>
+                            <h3 id="today-case" class="card-text"></h3>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col mb-4">
+                    <div class="card h-100">
+                        <i class="fa fa-check-square fa-3x"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Recovered Today</h5>
+                            <h3 id="today-recovered" class="card-text"></h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col mb-4">
+                    <div class="card h-100">
+                        <i class="fa fa-times fa-3x"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">New Deaths Today</h5>
+                            <h3 id="today-death" class="card-text"></h3>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </main>
+
+    </container>
+
+
+    <container class="aboutcovid">
+        <div class="container-fluid sub_section pt-5 pb-5" >
+            <div class="section_header text-center mb-5 mt-4">
+                <h1 style="color:wheat">About COVID -19</h1>
+            </div>
+            <div class="row ml-5">
+                <div class="col-lg-5 col-md-6 col-12" id="coronavirus">
+                    <h2 style="color: cyan"> What Is Covid-19 ?</h2>
+
+                    <p style="color: aquamarine"> <br><br>MERS-CoV is a novel β CoV that causes a spectrum of clinical illness from asymptomatic to the rapidly fatal disease mainly in those with comorbid conditions. Specific molecular diagnostic tests are available.
+                        <br><br>Currently, there are no specific drugs for prevention or treatment for MERS-CoV and vaccine development is in the early stages. Advice and guidance for travelers to the Middle East are updated regularly by the World Health Organization (WHO) and the Centers for Disease Control and Prevention (CDC). </p>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-12">
+                    <img src="images/9.jpg"  class="responsive" style="border: 6px solid wheat">
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid sub_section pt-5 pb-5" >
+            <div class="section_header text-center mb-5 mt-4">
+            </div>
+            <div class="row ml-5">
+                <div class="col-lg-5 col-md-6 col-12">
+
+                    <img src="images/10.jpg" class="responsive "style="border: 6px solid wheat" >
+
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-12" id="symptoms">
+                    <h2 style="color: cyan">Symptoms</h2>
+                    <p style="color: aquamarine">
+                        COVID-19 affects different people in different ways. Most infected people will develop mild to moderate illness and recover
+                        without hospitalization.
+                        <br><br>
+                        Most common symptoms: Fever, dry cough,Tiredness,Less common symptoms,aches and pains,sore throat,Diarrhoea,Conjunctivitis,
+                        Headache,loss of taste or smell,a rash on skin, or discolouration of fingers or toes.
+                        <br><br>
+                        Serious symptoms: Difficulty breathing or shortness of breath,chest pain or pressure,loss of speech or movement. </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid sub_section pt-5 pb-5" >
+            <div class="section_header text-center mb-5 mt-4">
+            </div>
+            <div class="row ml-5">
+                <div class="col-lg-5 col-md-6 col-12" id="prevention">
+                    <h2 style="color: cyan">Prevention</h2>
+
+                    <p style="color: aquamarine"> <br>Clean your hands often. Use soap and water, or an alcohol-based hand rub.<br><br>
+
+                       Maintain a safe distance from anyone who is coughing or sneezing.<br>
+
+                         Wear a mask when physical distancing is not possible.<br><br>
+
+                        Don’t touch your eyes, nose or mouth.<br><br>
+
+                       Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.<br><br>
+
+                        Stay home if you feel unwell.<br><br>
+
+
+                    </p>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-12">
+                    <img src="images/11.jpg" class="responsive" style="border: 6px solid wheat">
+                </div>
+            </div>
+        </div>
+    </container>
+
+
+    <!--BLOG CONTAINER-->
+    <br><br><br><br><br>
+    <container class="BLOG">
+        <div class="wrapper" id="BLOG">
+            <h1 id="varun" style="text-align: center"> <strong>Check Out Our Recent Blogs</strong> </h1><br><br>
+            <div class="cards_wrap">
+                <div class="card_item">
+                    <div class="card_inner">
+                        <div class="card_top">
+                            <img src="images/1.1.jpg" alt="Crises" />
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_category">
+                            </div>
+                            <div class="card_info">
+                                <a href="Blogs/1.html">
+                                    <p class="title">The Crisis</p></a>
+                                <p>
+                                    The worst global economic crisis since the Great Depression
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card_item">
+                    <div class="card_inner">
+                        <div class="card_top">
+                            <img src="images/2.1.jpg" alt="Lockdown" />
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_info">
+                                <a href="Blogs/2.html">
+                                    <p class="title">Lockdown Begins</p></a>
+                                <p>
+                                    Prime Minister Narendra Modi ordered a nationwide lockdown for 21 days
+                                </p>
+                            </div>
+                            <div class="card_creator">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card_item">
+                    <div class="card_inner">
+                        <div class="card_top">
+                            <img src="images/3.1.jpg" alt="Ray of Hope" />
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_info">
+                                <a href="Blogs/3.html">
+                                    <p class="title">Mental Health</p></a>
+                                <p>
+                                    Covid-19 impact on the mental health of people around the world
+                                </p>
+                            </div>
+                            <div class="card_creator">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card_item">
+                    <div class="card_inner">
+                        <div class="card_top">
+                            <img src="images/4.1.jpg" alt="Vaccine" />
+                        </div>
+                        <div class="card_bottom">
+                            <div class="card_info">
+                                <a href="Blogs/4.html">
+                                    <p class="title"> Vaccine Drive </p></a>
+                                <p>
+                                    India begins its administration of COVID-19 vaccines
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </container>
+
+<!--donate-->
+    <br><br>
+    <div class="donate" style="text-align: center">
+        <a href="https://www.pmcares.gov.in/en/" target="_blank"><span>DONATE TO PM CARES FUND</span></a>
+    </div>
+
+    <br><br>
+    <footer> Copyright © 2021 Team VAAS. All rights reserved</footer>
+        <script>
+            dateToday()
+            document.getElementById('search-btn').addEventListener('click', getResult)
+
+
+            function getResult() {
+                clear();
+
+                const activeCase = document.getElementById('active-case');
+                const todayCases = document.getElementById('today-case');
+                const todayDeath = document.getElementById('today-death');
+                const totalDeath = document.getElementById('total-death');
+                const todayRecovered = document.getElementById('today-recovered');
+                const totalRecovered = document.getElementById('total-recovered');
+
+
+                let countryName = document.getElementById('country-name').value;
+                countryName = countryName.toUpperCase();
+
+                fetch(`https://disease.sh/v3/covid-19/countries/${countryName}`)
+                    .then(res => res.json())
+                    .then(data => {
+
+                        console.log(data);
+                        const flag = data.countryInfo.flag;
+
+
+                        document.getElementById('country-flag').innerHTML += `
+                        : <span style="color: orange;">${countryName}</span>
+                        <img src="${flag}" alt="country flag" style="width: 70px;">
+                        `;
+
+                        activeCase.innerHTML += `
+                        <span class="bg-primary p-1 text-white rounded">${data.active}</span>
+                        `;
+
+                        todayCases.innerHTML += `
+                        <span class="bg-warning p-1 rounded">${data.todayCases}</span>
+                        `;
+
+                        todayDeath.innerHTML += `
+                        <span class="bg-danger p-1 text-white rounded">${data.todayDeaths}</span>
+                        `;
+
+                        totalDeath.innerHTML += `
+                        <span class="bg-danger p-1 text-white rounded">${data.deaths}</span>
+                        `;
+
+                        todayRecovered.innerHTML += `
+                        <span class="bg-success p-1 text-white rounded">${data.todayRecovered}</span>
+                        `;
+
+                        totalRecovered.innerHTML += `
+                        <span class="bg-success p-1 text-white rounded">${data.recovered}</span>
+                        `;
+
+
+                    })
+            }
+
+            function clear() {
+                document.getElementById('country-flag').innerHTML = '';
+                document.getElementById('active-case').innerHTML = '';
+                document.getElementById('today-case').innerHTML = '';
+                document.getElementById('today-death').innerHTML = '';
+                document.getElementById('total-death').innerHTML = '';
+                document.getElementById('today-recovered').innerHTML = '';
+                document.getElementById('total-recovered').innerHTML = '';
+            }
+
+
+            function dateToday() {
+                let today = new Date()
+                //console.log(today);
+
+                document.getElementById('date-today').innerText = today;
+            }
+
+        </script>
+
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
+</body> 
+
+</html>
