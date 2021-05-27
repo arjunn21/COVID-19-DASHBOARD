@@ -351,3 +351,10 @@ footer
 .title{
     text-transform: uppercase;
 }
+
+
+.responsive:hover, .card_top:hover{
+    box-shadow: 0px 0px 28px -6px rgba(0,0,0,0.71);
+}
+
+
