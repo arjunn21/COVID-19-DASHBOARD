@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/x-icon" href="images/fav.png"/>
 
+<!--Fonts -->
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet">
     <title>COVID-19 DASHBOARD</title>
 </head>
 
@@ -21,7 +23,7 @@
 <body>
 
     <!--navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light nav_style p-2 ">
+    <nav class="navbar  navbar-expand-lg navbar-light nav_style p-2 navbar-fixed-top">
         <a class="navbar-brand pl-4" href="#"><img class="virus2" src="images/fav.png" width="40" height="40" alt="virus"> &nbsp; <span><b>COVID-19</b></span> </a>
         <button class="navbar-toggler" id="button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -33,7 +35,7 @@
                     <a class="nav-link" href="#">HOME <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#CovidTracker"><b><img class="virus3" src="images/red_dot.png" width="14.875" height="10.475" alt="virus">LIVE</b>-TRACKER</a>
+                    <a class="nav-link" href="#CovidTracker"><img class="virus3" src="images/red_dot.png" width="14.875" height="10.475" alt="virus">LIVE-TRACKER</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#BLOG">BLOG</a>
@@ -81,16 +83,17 @@
 
 
     <br><br><br><br>
-    <container class ="SECOND" id="CovidTracker">
-        <main class="content-area container" >
+    <section class ="SECOND" id="CovidTracker">
+        <div class="content-area container-fluid" >
 
             <header>
-                <h1 id="ankur" style="text-align: center"> <b><img class="virus3" src="images/red_dot.png" width="29.75" height="20.95" alt="virus">LIVE</b>-TRACKER</h1>
+                <br>
+                <h1 id="ankur" style="text-align: center;color: #080F1E; margin-top: 5px;"><img class="virus3" src="images/red_dot.png" width="29.75" height="20.95" alt="virus"><strong>LIVE-TRACKER</strong></h1>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-9">
                             <div class= "mt-5 ">
-                                <h1> <strong>COVID-19 Cases In</strong><span id="country-flag"></span></h1>
+                                <h1> <strong style="color:#080F1E;">COVID-19 Cases In</strong><span id="country-flag"></span></h1>
                                 <h4 id="date-today"></h4>
                             </div>
                         </div>
@@ -174,9 +177,9 @@
 
             </div>
 
-        </main>
+        </div>
 
-    </container>
+    </section>
 
 
     <container class="aboutcovid">
@@ -257,6 +260,7 @@
     <br><br><br><br><br>
     <container class="BLOG">
         <div class="wrapper" id="BLOG">
+            <br>
             <h1 id="varun" style="text-align: center"> <strong>Check Out Our Recent Blogs</strong> </h1><br><br>
             <div class="cards_wrap">
                 <div class="card_item">
@@ -338,7 +342,7 @@
     <div class="donate">
         <p class = "donate">Help India fight COVID</p>
         <br>
-        <a class = "donate-btn" href="https://www.pmcares.gov.in/en/" target="_blank"><span>DONATE TO PM CARES FUND</span></a>
+        <a class = "donate-btn" href="https://www.pmcares.gov.in/en/" target="_blank"><span>DONATE</span></a>
     </div>
 
     <br><br>
