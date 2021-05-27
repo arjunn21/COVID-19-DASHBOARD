@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Lucida Console";
+    font-family: 'Montaga', serif;
 }
 
 span{
@@ -67,7 +67,7 @@ span{
 .main_header{
     height: 450px;
     width: 100%;
-    background: #080F1E;
+    background: #37474f;
 }
 
 .right_side h1{
@@ -83,7 +83,7 @@ a {
 
 
 body {
-    background-color: #080F1E;
+    background-color: #37474f;
 }
 
 h1, h6{
@@ -101,7 +101,7 @@ a:hover{
 }
 
 #date-today{
-    color: cyan;
+    color: #080F1E;
 }
 
 
@@ -141,6 +141,7 @@ i{
 .wrapper {
     width: 100%;
     margin: 20px auto;
+    background-color: #dee4e7;
 }
 
 .cards_wrap {
@@ -216,10 +217,14 @@ footer
     color: wheat;
 }
 
-#varun, #ankur{
-    color: wheat;
+#varun{
+    color: #080F1E;
 }
 
+#ankur{
+    color:wheat;
+    margin-top: 7px;
+}
 /*#button{*/
 /*    border: 2px solid wheat;*/
 /*}*/
@@ -278,4 +283,12 @@ footer
     text-transform: uppercase;
     box-shadow: 2px;
     color: #3cb0fd;
+}
+
+.content-area{
+    background-color: #dee4e7;
+}
+
+.tracker{
+    color: #080F1E;
 }
