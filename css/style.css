@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montaga', serif;
+    font-family: 'Open Sans', serif;
 }
 
 span{
@@ -21,6 +21,9 @@ span{
 
 .virus{
     animation: corona 10s linear infinite;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 @keyframes corona {
@@ -242,6 +245,8 @@ footer
 .responsive {
     max-width: 100%;
     height: auto;
+    border: 2px solid #080F1E;
+    border-radius: 5%;
 }
 /*.responsive {*/
 /*    width: 100%;*/
@@ -289,6 +294,60 @@ footer
     background-color: #dee4e7;
 }
 
-.tracker{
+/*Navbar*/
+
+.nav-item .nav-link{
+    font: 20px 'Montaga', serif;
+    text-transform: uppercase;
+
+}
+
+.navbar{
+    background-color: #1c1b1b;
+}
+.navbar-brand{
+    /*background-color: ;*/
+    margin-left: 4px;
+    font-family: 'Cormorant', serif;
+}
+
+.dark-mode {
+    background-color: #080F1E;;
+    color: #dee4e7;
+}
+.quote{
+    text-align: justify;
+    font-family: 'Cormorant', serif;
+    color: #dee4e7;
+}
+
+/*Icons*/
+.fas, .fa-check-square{
+    color: #3dd03d;
+}
+.fa-th-list{
+    color:dodgerblue;
+}
+.fa-times, .fa-times-circle{
+    color:#cd5d5d;
+}
+
+.middle-container{
+    background-color: #d7d7de;
     color: #080F1E;
+    font-size: 20px;
+    /*font-weight: bold;*/
+}
+
+.top-container, .bottom-container{
+    font-size: 20px;
+    color:#dee4e7;
+    font-weight: normal;
+}
+
+.card-title{
+    font-weight: bold;
+}
+.title{
+    text-transform: uppercase;
 }
