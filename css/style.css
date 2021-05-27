@@ -343,6 +343,7 @@ footer
     font-size: 20px;
     color:#dee4e7;
     font-weight: normal;
+    text-shadow: 2px 2px black;
 }
 
 .card-title{
