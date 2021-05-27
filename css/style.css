@@ -248,9 +248,6 @@ footer
     border: 2px solid #080F1E;
     border-radius: 5%;
 }
-.responsive:hover{
-    box-shadow: 0 0 28px -6px rgba(0,0,0,0.71);
-}
 /*.responsive {*/
 /*    width: 100%;*/
 /*    max-width: 400px;*/
@@ -269,11 +266,10 @@ footer
     -moz-border-radius: 9;
     border-radius: 9px;
     font-family: Georgia, serif;
-    color: #080F1E;
+    color: #ffffff;
     font-size: 20px;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
-    border: 1px solid #dee4e7;
 }
 
 .donate-btn:hover {
@@ -290,8 +286,8 @@ footer
     font-family: 'Merriweather', serif;
     text-align: center;
     text-transform: uppercase;
+    box-shadow: 2px;
     color: #3cb0fd;
-    text-shadow:2px 2px 4px #000000 ;
 }
 
 .content-area{
@@ -340,14 +336,13 @@ footer
     background-color: #d7d7de;
     color: #080F1E;
     font-size: 20px;
-    font-weight: normal;
+    /*font-weight: bold;*/
 }
 
 .top-container, .bottom-container{
     font-size: 20px;
     color:#dee4e7;
     font-weight: normal;
-    text-shadow: 2px 2px 4px #000000;
 }
 
 .card-title{
@@ -355,21 +350,11 @@ footer
 }
 .title{
     text-transform: uppercase;
-    text-decoration: none;
-
 }
 
-.serious{
-    color: #de3c3c;
+
+.responsive:hover, .card_top:hover{
+    box-shadow: 0px 0px 28px -6px rgba(0,0,0,0.71);
 }
 
-.prevention{
-    list-style-type: none;
-}
 
-footer{
-    background-color: #dee4e7;
-    color:#080F1E;
-    font-weight: bold;
-
-}
