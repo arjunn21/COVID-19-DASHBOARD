@@ -11,7 +11,7 @@ With all this in view, we came up with an idea to make a <strong>COVID-19 DASHBO
 <br/>
 
 
-## Sailent Features
+## Salient Features
 
 
 -> The webpage includes a COVID-19 Live Tracker which displays statistics that is fetched from an Application Programming Interface(API) and gets updated in real time.
